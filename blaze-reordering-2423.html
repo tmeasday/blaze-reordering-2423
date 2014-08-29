@@ -1,0 +1,17 @@
+<head>
+  <title>blaze-reordering-2423</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <ul>
+    {{#each items}}<li>item {{text}}</li>{{/each}}
+  </ul>
+  
+  <button>Add item</button>
+</template>
