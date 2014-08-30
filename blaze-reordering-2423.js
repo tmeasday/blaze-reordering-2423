@@ -13,7 +13,12 @@ if (Meteor.isClient) {
     this.$('ul').sortable();
   }
   
+  Session.set('showItems', true)
   Template.hello.helpers({
+    showItems: function() {
+      return Session.get('showItems');
+    },
+    
     items: function () {
       return Items.find()
     }
@@ -21,7 +26,8 @@ if (Meteor.isClient) {
 
   Template.hello.events({
     'click button': function () {
-      insertItem();
+      Session.set('showItems', false);
+      // insertItem();
     }
   });
 }

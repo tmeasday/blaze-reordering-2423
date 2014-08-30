@@ -10,8 +10,8 @@
 
 <template name="hello">
   <ul>
-    {{#each items}}<li>item {{text}}</li>{{/each}}
+    {{#if showItems}}{{#each items}}<li>item {{text}}</li>{{/each}}{{else}}Not Showing{{/if}}
   </ul>
   
-  <button>Add item</button>
+  <button>Switch Display</button>
 </template>
